@@ -1,0 +1,126 @@
+{% if session.get('key') == "Director" %}
+{% extends "layouts/DIR/commonlayoutdirector.html" %}
+{% block heading%}
+Requests
+{% endblock %}
+
+{% block content %}
+
+<form>
+{% for i in data %}
+<div style="margin-top: 2%;" class="row">
+  <div class="col-md-12">
+    <div class="container">
+      <div id="request1" class="card shadowforcards">
+        <form id="requestfm1" action="" method="POST">
+          <div id="requestcard1" style="margin-top:2%;display: flex;justify-content: space-around;" class="card-body">
+              <h5>{{i.Name}}</h5>
+              <!-- <form action="/alumni/authenticate" method="post"> -->
+                <input id="prn" style="margin-top:-2%;border:none;" type="text" value="{{ i.PRN }}" readonly>
+                <h6><button id="approve" style="margin-top:-25%;"  data-url="/alumni/authenticate" class="btn btn-success"><i class="fa fa-check"></i></button></h6>
+                <h6><button id="reject" style="margin-top:-25%;" class="btn btn-danger"><i class="fa fa-times"></i></button></h6>
+             
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+</form>
+
+
+      <!-- <form action="" method="post">
+        <table id="table_schedule" class="table table-hover table-striped table.active justify-content: space-evenly;">
+          <thead style="border-top: 2px solid black;border-bottom: 2px solid black;" >
+              <th>SR.NO</th>
+              <th>Name</th>
+              <th>PRN / Eligibility No.</th>
+              <th></th>
+              <th></th>
+          </thead>
+          <tbody>
+            <form id="request1fm" action="/alumni/authenticate" method="POST"></form>
+              <tr id="request1">
+                  <th scope="row">1</th>
+                  <td>Shivprasad Titare</td>
+                  <td><input type="text" name="prn" value="22212720171242112134" readonly> </td>
+                  <td><button class="btn btn-success" type="button" onclick="approveRequest('request1');"> Approve</button></td>
+                  <td><button class="btn btn-danger" onclick="rejectRequest('request1');">Reject</button></td>
+              </tr>
+            </form>
+              <tr id="request2">
+                <th scope="row">2</th>
+                <td>Sangameh Somawar</td>
+                <td>22212720171124210004</td>
+                <td><button class="btn btn-success" > Approve</button></td>
+                <td><button class="btn btn-danger">Reject</button></td>                
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Omkar Deshpande</td>
+                <td>22212720171124510005</td>
+                <td><button class="btn btn-success">Approve</button></td>
+                <td><button class="btn btn-danger">Reject</button></td>
+              </tr>
+              <tr>
+                  <th scope="row">4</th>
+                  <td>Rahulsingh Bisen</td>
+                  <td>22212720171124217894</td>
+                  <td><button class="btn btn-success" > Approve</button></td>
+                  <td><button class="btn btn-danger">Reject</button></td>
+              </tr>
+              <tr>
+                  <th scope="row">5</th>
+                  <td>Sangameh Somawar</td>
+                  <td>22212720171124210004</td>
+                  <td><button class="btn btn-success" > Approve</button></td>
+                  <td><button class="btn btn-danger">Reject</button></td>
+              </tr>
+            </tbody>
+      </table> 
+    </form> -->
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+    // if want to stop default submission
+      
+      $("#requestfm1").submit(function(e){
+        e.preventDefault();
+      });
+
+      $(document).on('click','#approve',function(){
+          // alert('Aya');
+          val = document.getElementById('prn').value;
+          // alert(val);
+          send('/alumni/authenticate',val);
+      });
+
+      $(document).on('click','#reject',function(){
+          val = document.getElementById('prn').value;
+          // alert(val);
+          send('/alumni/authenticate/reject',val);
+      });
+
+    });
+
+    function send(url,data)
+    {
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        success: function(data) {
+            alert(data);
+            window.location.reload();
+        }
+      });
+    }
+
+  </script>
+{% endblock %}
+{% else %}
+<center><h1>You are Not an Authorized User !</h1></center>
+{% endif %}

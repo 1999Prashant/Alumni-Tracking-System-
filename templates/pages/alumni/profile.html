@@ -1,0 +1,397 @@
+{% extends "layouts/alumni/commonlayoutalumni.html" %}
+
+
+{% block heading %}
+Alumni Profile
+{% endblock %}
+{% block content %}
+<div style="overflow-x: hidden;">
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 " style="margin-top: 3%;">
+                <div class="card shadowforcards">
+                    <div class="card-header">
+                        <h4 class="card-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp&nbsp Edit Profile</h4><hr>
+                    </div>
+                    <div class="card-body ">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 pr-1">
+                                    <div class="form-group">
+                                        <label>Company</label>
+                                        <input type="text" class="form-control"  placeholder="Company" value="Creative Code Inc.">
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-3 px-1">
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" placeholder="Username" value="michael23">
+                                    </div>
+                                </div> -->
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 pr-1">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" placeholder="Company" value="Mike">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 pr-1">
+                                    <div class="datalist-holder" >
+                                        <label>City</label>
+                                        
+                                            <input list="country" name="country" class="datalist-input form-control" placeholder="Select City" >
+                                            <datalist id="country">
+                                                <option value="Bicholim">   
+                                                    <option value="Canacona">
+                                                    <option value="Cuncolim">
+                                                    <option value="Curchorem">
+                                                    <option value="Mapusa"> 
+                                                    <option value="Margao"> 
+                                                    <option value="Mormugao">   
+                                                    <option value="PanajiCapital"> 
+                                                    <option value="Pernem"> 
+                                                    <option value="Ponda">  
+                                                    <option value="Quepem"> 
+                                                    <option value="Sanguem">    
+                                                    <option value="Sanquelim">  
+                                                    <option value="Valpoi">
+                                                    <option value="Nanded">
+                                                    <option value="Aurangabad"> 
+                                                    <option value="Mumbai">
+                                                    <option value="Delhi">
+                                                
+                                    </datalist>
+                                         
+                                        <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label>City</label>
+                                        <input type="text" class="form-control" placeholder="City" value="Mike">
+                                    </div> -->
+                                </div>
+                                <div class="col-md-4 px-1">
+                                    <div class="form-group">
+                                        <label>Country</label>
+                                        <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pl-1">
+                                    <div class="form-group">
+                                        <label>Postal Code</label>
+                                        <input type="number" class="form-control" placeholder="ZIP Code">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>About Me</label>
+                                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-top: 3%;">
+                <div class="card card-user shadowforcards">
+                    <div class="card-image">
+                        <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
+                    </div>
+                    <div class="card-body ">
+                        <div class="author">
+                            <a href="#">
+                                <img class="avatar border-gray" src="/static/IMG/faces/prashant.jpg" alt="...">
+    
+                            </a>
+                            <p class="description">
+                                        
+                                <!-- <center> -->
+                                <table style="font-size: small;" cellpadding="5">
+                                    <tr>
+                                      <td align="left" style="font-weight: 600;">Email:</td>
+                                      <td align="left">prashantphulari21@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" style="font-weight: 600;">Unique Id: </td>
+                                        <td align="left">22212720171124211002</td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td align="left" style="font-weight: 600;">Passout Year: </td>
+                                        <td align="left">2020</td>
+                                    </tr>
+                                  </table>
+                                <!-- </center> -->
+
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <div class="button-container mr-auto ml-auto">
+                        <a href="#" target="_blank" data-toggle="modal" data-target="#Facebook"><i class="fa fa-facebook-square"></i></a>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="Facebook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h4 class="modal-title" id="exampleModalLabel">Facebook Link</h4>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          <div class="col-sm-12 pr-1">
+                                                              <div class="form-group">
+                                                                  <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Facebook Link" value="">
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                          <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                        <!-- <button href="ww.twitter.com" class="btn btn-simple btn-link btn-icon"> -->
+                        <a href="#" target="_blank" data-toggle="modal" data-target="#Twitter"> <i class="fa fa-twitter"></i></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Twitter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Twitter Link</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  <!-- </button> -->
+                                </div>
+                                <div class="modal-body">
+                                  <div class="col-sm-12 pr-1">
+                                      <div class="form-group">
+                                          <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Twitter Link" value="">
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </button>
+                        <!-- <button href="www.google.com" class="btn btn-simple btn-link btn-icon"> -->
+                            <a href="#" target="_blank"data-toggle="modal" data-target="#Google"> <i class="fa fa-google-plus-square"></i></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Google" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Google+ Link</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  <!-- </button> -->
+                                </div>
+                                <div class="modal-body">
+                                  <div class="col-sm-12 pr-1">
+                                      <div class="form-group">
+                                          <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Google+ Link" value="">
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                            <!-- </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+<div class="col">
+<div  class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadowforcards">
+                <div class="card-header">
+                    <h4 class="card-title"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp&nbsp Expertise<!-- Button trigger modal -->
+                        <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Add +
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Skills</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="col-sm-12 pr-1">
+                                    <div class="form-group">
+                                        <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Skills" value="">
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </h4><hr size="2">
+                </div>
+                <div class="card-body">
+
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div  class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadowforcards">
+                <div class="card-header">
+                    <h4 class="card-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp&nbsp Work Experience<!-- Button trigger modal -->
+                        <button style="float: right;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                          Add +
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Work Experience</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="col-sm-12 pr-1">
+                                      <div class="form-group"style="margin-top: -7%;">
+                                          <label>Job Title</label>
+                                          <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Skills" value="">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-12 pr-1">
+                                    <div class="form-group"style="margin-top: -5%;">
+                                        <label>Company Name</label>
+                                        <input style="width: 100%;" type="text" class="form-control" placeholder="Enter Skills" value="">
+                                    </div>
+                                </div>
+                                <div class="row">  
+                                    <div class="form-group" style="margin-left: 4%;">
+                                    <label>Start Date</label>
+                                    <br><input style="width: 90%;" type="date" class="form-control" placeholder="Enter Company Name" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>End Date</label>
+                                    <br><input style="width: 90%;" type="date" class="form-control" placeholder="Enter Company Name" value="">
+                                </div>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                       
+                    </h4><hr size="2">
+                </div>
+                <div class="card-body">
+
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+        </div>
+</div>
+<div class="column">
+<div class="col-md-4" style="margin-top: -41%;margin-left: 66.5%;">
+    <div class="card card-user shadowforcards" style="margin-left: 1%;">
+        <h4 class="card-title" style="padding: 10px;">&nbsp<i class="fa fa-exclamation-circle"></i>&nbsp&nbsp Basic Information</h4><hr>
+        <!-- <div class="card-image">
+            <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
+        </div>
+        <div class="card-body ">
+            <div class="author">
+                <a href="#">
+                    <img class="avatar border-gray" src="/static/IMG/faces/prashant.jpg" alt="...">
+
+                </a> -->
+                <p class="description">
+                            
+                    <!-- <center> -->
+                    <table style="font-size: small;" cellpadding="5">
+                        <tr>
+                          <td align="center" style="font-weight: 600;"><i class="fa fa-birthday-cake" aria-hidden="true"></i></td>
+                          <td align="left">21/05/1998</td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="font-weight: 600;"><i class="fa fa-mars" aria-hidden="true"></i></td>
+                            <td align="left">Male</td>
+                        </tr>
+                       
+                        <tr>
+                            <td align="center" style="font-weight: 600;"><i class="fa fa-male" aria-hidden="true"></i><i style="margin-left: -9%;" class="fa fa-female" aria-hidden="true"></i></td>
+                            <td align="left">Single</td>
+                        </tr>
+                      </table>
+                    <!-- </center> -->
+
+                </p>
+            </div>
+            
+        </div>
+      
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

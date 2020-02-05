@@ -1,0 +1,410 @@
+{% extends "layouts/student/commonlayoutstudent.html" %}
+{% block heading %}
+Student Profile
+{% endblock %}
+
+
+{% block content %}
+
+<div class="wrapper">
+    <!-- <div class="main-panel"> -->
+        <!-- Navbar -->
+        
+        <!-- End Navbar -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8" style="margin-top: 3%;">
+                        <div class="card shadowforcards">
+                            <div class="card-header">
+                                <h4 class="card-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp&nbsp Edit Profile</h4>
+                                <hr size=3 color="#0">
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-5 pr-1">
+                                            <div class="form-group" style="width: 120%;">
+                                                <label>College Name (disabled)</label>
+                                                <input type="text" class="form-control" disabled="" placeholder="College" value="MGM">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 pl-1">
+                                            <div class="form-group" style="padding-left: 17%;" >
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" placeholder="Email" style="width: 120%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pr-1">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control" placeholder="First Name" value="Prasad">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pl-1">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control" placeholder="Last Name" value="Nagthane">
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pl-1"style="margin-left: 1.5%;" >
+                                            <div class="form-group">
+                                                <label>Date of Birth</label>
+                                                <br><input style="width: 110%;" type="date" class="form-control" placeholder="Enter Company Name" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 pl-1" style="margin-left: 15%;" >
+                                            <div class="form-group">
+                                                <label>Contact</label>
+                                                <input style="width: 100%;" type="Contact" class="form-control" placeholder="Contact" value="7895431875">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label>Hobbies</label>
+                                                <input style="width: 100%;" type="Contact" class="form-control" placeholder="Enter Hobbies" value="">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Address</label>
+                                                <input type="text" class="form-control" placeholder="Permenant Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 pr-1">
+                                            <div class="datalist-holder" >
+                                                <label>City</label>
+                                                
+                                                    <input list="country" name="country" class="datalist-input form-control" placeholder="Select City" >
+                                                    <datalist id="country">
+                                                        <option value="Bicholim">	
+                                                            <option value="Canacona">
+                                                            <option value="Cuncolim">
+                                                            <option value="Curchorem">
+                                                            <option value="Mapusa">	
+                                                            <option value="Margao">	
+                                                            <option value="Mormugao">	
+                                                            <option value="PanajiCapital"> 
+                                                            <option value="Pernem">	
+                                                            <option value="Ponda">	
+                                                            <option value="Quepem">	
+                                                            <option value="Sanguem">	
+                                                            <option value="Sanquelim">	
+                                                            <option value="Valpoi">
+                                                            <option value="Nanded">
+                                                            <option value="Aurangabad"> 
+                                                            <option value="Mumbai">
+                                                            <option value="Delhi">
+                                                                <option value="Indore">	
+                                                                    <option value="Patna">
+                                                                    <option value="Madurai">
+                                                                    <option value="Bhopal">
+                                                                    <option value="Ludhiana">	
+                                                                    <option value="Coimbatore">	
+                                                                    <option value="Agra">	
+                                                                    <option value="Vadodara"> 
+                                                                    <option value="Jaipur">	
+                                                                    <option value="Surat">	
+                                                                    <option value="Nagpur">	
+                                                                    <option value="Lucknow">	
+                                                                    <option value="Pune">	
+                                                                    <option value="Ahmedabad">
+                                                                    <option value="Bangalore">
+                                                                    <option value="Hyderabad"> 
+                                                                    <option value="Chennai">
+                                                                    <option value="Calcutta">
+                                             </datalist>
+                                                 
+                                                <!-- <input type="text" class="form-control" placeholder="City" value="Mike"> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 px-1">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" class="form-control" placeholder="Country" value="Andrew">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 pl-1">
+                                            <div class="form-group">
+                                                <label>Postal Code</label>
+                                                <input type="text" class="form-control" placeholder="ZIP Code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>About Me</label>
+                                                <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">District Court</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header">
+                                        <h4 class="card-title"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp&nbsp Educational Details</h4>
+                                        <hr size=3 color="#0">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 pl-1">
+                                        <div class="form-group" style="margin-left: 6%;">
+                                    <label>Current Year of Study</label>
+                                    <select class="form-control" style="width: 70%; ">
+                                        <option disabled="" selected>Select</option>
+                                        <option>First year</option>
+                                        <option>Second year</option>
+                                        <option>Third year</option>
+                                        <option>Final year</option>
+                                        <option>M.tech(FY) year</option>
+                                        <option>M.tech(SY) year</option>
+                                      </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 pl-1">
+                                      <div class="form-group">
+                                      <label>Course of Studying</label>
+                                    <select class="form-control" >
+                                        <option disabled="" selected>Select</option>
+                                        <option>Computer Science And Engineering</option>
+                                        <option>Electronics And Telecommunication</option>
+                                        <option>Civil Engineering</option>
+                                        <option>Mechanical Engineering</option>
+                                        <option>Instrumentation Engineering</option>
+                                        <option>Information technology</option>
+                                      </select>
+                                      </div>
+                                    </div>
+                                    </div>
+                                      <br>
+                                      
+                                    <label style="margin-left: 1.5%;">Grades</label>
+                                    
+                                      <table id="table_schedule" class="table table-hover table-striped table.active justify-content: space-evenly;">
+                                        <thead style="border-top: 2px solid black;border-bottom: 2px solid black;" >
+                                            <th>SR.NO</th>
+                                            <th>YEAR OF STUDY</th>
+                                            <th>CGPA/PERCENTAGE</th>
+                                            <th>YEAR OF COMPLETION</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                              <th scope="row">1</th>
+                                              <td>First Year</td>
+                                              <td>8.81 CGPA</td>
+                                              <td>2017</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">2</th>
+                                              <td>Second Year</td>
+                                              <td>7.89 CGPA</td>
+                                              <td>2019</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">3</th>
+                                              <td>Third Year</td>
+                                              <td>8.89 CGPA</td>
+                                              <td>2020</td>
+                                            </tr>
+                                          </tbody>
+                                    </table>
+
+                                      <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter1" style="cursor: pointer;">
+                                            Add Details
+                                        </button>
+                                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Grade Details</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="col-sm-12 pr-1">
+                                      <div class="form-group">
+                                          
+                                         
+                                          <div class="col-md-8 pl-1">
+                                            <div  style="margin-right: 20%;">
+                                        <label>Current Year of Study</label>
+                                        <select class="form-control" style="width: 100%; ">
+                                            <option disabled="" selected>Select</option>
+                                            <option>First year</option>
+                                            <option>Second year</option>
+                                            <option>Third year</option>
+                                            <option>Final year</option>
+                                            <option>M.tech(FY) year</option>
+                                            <option>M.tech(SY) year</option>
+                                          </select>
+                                            </div>
+                                        </div>
+                                          
+                                          <label>CGPA/Percentage</label>
+                                          <br><input style="width: 70%;" type="text" class="form-control" placeholder="Enter CGPA/Percentage" value="">
+                                          <label>Year of Completion</label>
+                                          <br><input style="width: 70%;" type="text" class="form-control" placeholder="Enter Year of Completion" value="">
+                                        
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="cursor: pointer;">Close</button>
+                                  <button type="button" class="btn btn-primary" style="cursor: pointer;">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Modal -->
+
+
+                                        <br><br>
+                                        
+                                        
+                                        
+                                        
+                                        <div class="card-header">
+                                            <h4 class="card-title"><i class="fa fa-industry" aria-hidden="true"></i></i>&nbsp&nbsp Internships</h4>
+                                            <hr size=3 color="#0">
+                                        </div>
+                                        <label style="margin-left: 1.5%;">Internship Details</label>
+                                        <table id="table_schedule" class="table table-hover table-striped table.active justify-content: space-evenly;">
+                                            <thead style="border-top: 2px solid black;border-bottom: 2px solid black;" >
+                                                <th>SR.NO</th>
+                                                <th>Organization Name</th>
+                                                <th>Duration</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                  <th scope="row">1</th>
+                                                  <td>Infosys</td>
+                                                  <td>3 months</td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">2</th>
+                                                  <td>Sankey Solutions</td>
+                                                  <td>1 month</td>
+                                                 </tr>
+                                              </tbody>
+                                        </table>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" style="cursor: pointer;">
+                                            Add Internship
+                                        </button>
+                                        
+                                        
+                                      
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="exampleModalLabel">Internship</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="col-sm-12 pr-1">
+                                      <div class="form-group">
+                                          
+                                          <label>Organization Name</label>
+                                          <br><input style="width: 70%;" type="text" class="form-control" placeholder="Enter Organization Name" value="">
+                                          <label>Duration</label>
+                                          <br><input style="width: 50%;" type="text" class="form-control" placeholder="Enter Duration" value="">
+                                        
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" style="cursor: pointer;">Close</button>
+                                  <button type="button" class="btn btn-primary" style="cursor: pointer;">Save changes</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+
+
+
+
+
+
+
+                                    
+                                    
+                                    
+                                    <button type="submit" class="btn btn-info btn-fill pull-right" style="cursor: pointer;">Update Profile</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-user shadowforcards" style="margin-top: 10%;">
+                            <div class="card-image">
+                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
+                            </div>
+                            <div class="card-body ">
+                                <div class="author">
+                                    <a href="#">
+                                        <img class="avatar border-gray" src="/static/IMG/faces/prashant.jpg" alt="...">
+                                        <h5 class="title">Prasad Nagthane</h5>
+                                    </a>
+                                    <p class="description">
+                                        
+                                        <!-- <center> -->
+                                        <table style="font-size: small;" cellpadding="5">
+                                            <tr>
+                                              <td align="left" style="font-weight: 600;">Email:</td>
+                                              <td align="left">prashantphulari21@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" style="font-weight: 600;">Unique Id: </td>
+                                                <td align="left">22212720171124211002</td>
+                                            </tr>
+                                           
+                                            <tr>
+                                                <td align="left" style="font-weight: 600;">Passout Year: </td>
+                                                <td align="left">2020</td>
+                                            </tr>
+                                          </table>
+                                        <!-- </center> -->
+        
+                                    </p>
+                                </div>
+                                <!-- <p class="description text-center">
+                                    unique-id=123456
+                                    
+                                </p> -->
+                            </div>
+                            <hr>
+                            <div class="button-container mr-auto ml-auto">
+                                <button href="www.facebook.com" class="btn btn-simple btn-link btn-icon">
+                                    <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1653993517&extra_1=s%7Cc%7C318504236063%7Ce%7Cfacebook%20%27%7C&placement=&creative=318504236063&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D1653993517%26adgroupid%3D63066387003%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D1t1%26target%3D%26targetid%3Dkwd-360705453827%26loc_physical_ms%3D1007787%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiAmsrxBRDaARIsANyiD1oKbds-ftMwP2OreeOS80Y5xKWSXKgCbG6_IrLCt_u1KYLE4fvjdnYaAiB1EALw_wcB" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                <!-- </button> -->
+                                <button href="www.twitter.com" class="btn btn-simple btn-link btn-icon">
+                                    <a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter"></i></a>
+                                </button>
+                                <button href="www.google.com" class="btn btn-simple btn-link btn-icon">
+                                    <a href="https://www.google.com/intl/en-GB/gmail/about/#" target="_blank"> <i class="fa fa-google-plus-square"></i></a>
+                                </button>
+                                <button href="www.limkedin.com" class="btn btn-simple btn-link btn-icon">
+                                    <a href="https://www.linkedin.com/" target="_blank"> <i class="fa fa-linkedin"></i></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+{% endblock %}

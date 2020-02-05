@@ -1,0 +1,163 @@
+{% if session.get('key') == "Director" %}
+{% extends "layouts/DIR/commonlayoutdirector.html" %}
+{% block heading%}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="margin-left:10%;">
+                  Select Month
+                </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">January</a>
+                    <a class="dropdown-item" href="#">February</a>
+                    <a class="dropdown-item" href="#">March</a>
+                    <a class="dropdown-item" href="#">April</a>
+                    <a class="dropdown-item" href="#">May</a>
+                    <a class="dropdown-item" href="#">June</a>
+                    <a class="dropdown-item" href="#">July</a>
+                    <a class="dropdown-item" href="#">August</a>
+                    <a class="dropdown-item" href="#">Sepetember</a>
+                    <a class="dropdown-item" href="#">october</a>
+                    <a class="dropdown-item" href="#">November</a>
+                    <a class="dropdown-item" href="#">December</a>
+                   </div>
+             </div>
+             <div class="dropdown">
+                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"style="margin-left:30%;">
+                  Select Year
+                 </button>
+                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">2019</a>
+                    <a class="dropdown-item" href="#">2018</a>
+                    <a class="dropdown-item" href="#">2017</a>
+                  </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"style="margin-left:30%;">
+                 Select Department
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                   <a class="dropdown-item" href="#">COMPUTER SCIENCE</a>
+                   <a class="dropdown-item" href="#">CIVIL ENGINEERING</a>
+                   <a class="dropdown-item" href="#">ETC</a>
+                 </div>
+           </div>
+
+            <button type="button" class="btn btn-primary btn-sm" style="margin-left:8%;">Apply</button>
+        </div> <br>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-sm-12">
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:2px solid #fff;border-radius:10px;background: linear-gradient(to right top, #d16ba5, #ca6eb3, #c073c0, #b378cd, #a37ed9, #9883e0, #8b89e7, #7d8eed, #7694f1, #6e9af5, #679ff8, #5fa5fb);">
+                    <div class="card-body">
+                        <b style="color:#ffffff;font-weight:500%;font-weight:400;font-size:17px;" class="card-title">TOTAL ALUMNAE</b>
+                        <hr>
+                        <div style="display:flex;justify-content:space-between;">
+                            <i style="color:#ffffff;font-size:24px;" class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            <p style="color:#ffffff;font-size:18px;">100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-sm-12">
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:2px solid #fff;border-radius:10px;background: linear-gradient(to right top, #d16ba5, #ca6eb3, #c073c0, #b378cd, #a37ed9, #9883e0, #8b89e7, #7d8eed, #7694f1, #6e9af5, #679ff8, #5fa5fb);">
+                    <div class="card-body">
+                        <b style="color:#ffffff;font-weight:500%;font-weight:400;font-size:17px;" class="card-title">TOTAL STUDENTS</b>
+                        <hr>
+                        <div style="display:flex;justify-content:space-between;">
+                            <i style="color:#ffffff;font-size:24px;" class="fa fa-user" aria-hidden="true"></i>
+                            <p style="color:#ffffff;font-size:18px;">170</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-sm-12">
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:2px solid #fff;border-radius:10px;background: linear-gradient(to right top, #d16ba5, #ca6eb3, #c073c0, #b378cd, #a37ed9, #9883e0, #8b89e7, #7d8eed, #7694f1, #6e9af5, #679ff8, #5fa5fb);">
+                    <div class="card-body">
+                        <b style="color:#ffffff;font-weight:500%;font-weight:400;font-size:17px;" class="card-title">TOTAL SESSIONS</b>
+                        <hr>
+                        <div style="display:flex;justify-content:space-between;">
+                            <i style="color:#ffffff;font-size:24px;" class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            <p style="color:#ffffff;font-size:18px;">50</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-sm-12">
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:2px solid #fff;border-radius:10px;background: linear-gradient(to right top, #d16ba5, #ca6eb3, #c073c0, #b378cd, #a37ed9, #9883e0, #8b89e7, #7d8eed, #7694f1, #6e9af5, #679ff8, #5fa5fb);">
+                    <div class="card-body" style="text-overflow: ellipsis;white-space:nowrap;overflow:hidden;color:white">
+                        <b data-toggle="tooltip" title="TOTAL STUDENTS ASSOCIATED WITH ALUMNI!" style="color:#ffffff;font-weight:500%;font-weight:400;font-size:16px;" class="card-title">TOTAL STUDENTS ASSOCIATED WITH ALUMNI</b>
+                        <hr>
+                        <div style="display:flex;justify-content:space-between;">
+                            <i style="color:#ffffff;font-size:24px;" class="fa fa-users" aria-hidden="true"></i>
+                            <p style="color:#ffffff;font-size:18px;">40</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAPH -->
+    <div style="margin-left: 0.3%;" class="row">
+        <div class="col-lg-12 col-md-12 ">
+            <div class="card" style="background: linear-gradient(to right top, #d16ba5, #ca6eb3, #c073c0, #b378cd, #a37ed9, #9883e0, #8b89e7, #7d8eed, #7694f1, #6e9af5, #679ff8, #5fa5fb);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:2px solid #fff;border-radius:10px;">
+                    
+                    <div class="card-body">
+                        <b style="color:white;font-weight:500%;font-size:20px;" class="card-title">TOP ALUMNAE</b>
+                        <canvas id="graph"></canvas>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function(){
+        var data = {
+            labels: ['FURKHAN','PRASHANT','PRASAD','BHAKTI','SHWETA'],
+            datasets: [
+                {
+                    label : "SESSIONS CONDUCTED",
+                    data  : ["12","10","14","6","11"],
+
+                    borderColor:'rgb(255,255,255)',
+                    backgroundColor:'rgb(255,255,255,0.4)',
+                    opacity:0.4
+                }
+            ]
+        };
+        
+        var ctx = document.getElementById('graph');
+        // console.log(ctx);
+        
+        var chart = new Chart(ctx, {
+            type : "line",
+            data : data,
+            options : {}
+        });
+        
+    });
+    
+</script>
+
+
+{% endblock %}
+{% else %}
+<center><h1>You are Not an Authorized User !</h1></center>
+{% endif %}

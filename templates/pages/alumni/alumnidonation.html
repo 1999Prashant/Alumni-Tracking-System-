@@ -1,0 +1,59 @@
+{% extends "layouts/alumni/commonlayoutalumni.html" %}
+
+{% block heading %}
+  Donation
+{% endblock %} 
+
+{% block content %}
+<script>
+  
+    function pay(){
+        location.replace("https://p-y.tm/Fps2-1O");
+    }
+
+</script>
+
+<div class="row" style="margin-top: 3%;">
+  <div class="col-md-5" style="margin-left: 3%;">
+    <div class="card shadowforcards" style="display:flex;justify-content:space-between;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+      <div >
+      <img style="height: fit-content;border-bottom:2px solid black;" class="card-img-top" src="../static/IMG/college.png" alt="">
+      </div>
+      <!-- <hr> -->
+      <div class="card-body">
+        <h3 class="card-title">College Developement</h3><br>
+        <button onmouseout="hoverOut(id);" id="btn1" onmouseover="hoverOver(id);" onclick="pay();" class="btn btn-primary" style="border-color: white;color: white;">Donate</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-5" style="margin-left: 3%;">
+      <div class="card shadowforcards" style="display:flex;justify-content:space-between;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+        <div >
+        <img style="border-bottom:2px solid black;height: fit-content;" class="card-img-top" src="../static/IMG/scholer.png" alt="">
+        </div>
+        <!-- <hr> -->
+        <div class="card-body">
+          <h3 class="card-title">Student Scholership</h3><br>
+          <button onmouseout="hoverOut(id);" id="btn2" onmouseover="hoverOver(id);" onclick="pay();" class="btn btn-primary" style="border-color: white;color: white;">Donate</button>
+        </div>
+        <!-- <hr> -->
+      </div>
+    </div>
+
+    
+</div>
+
+<script>
+  function hoverOver(id){
+    document.getElementById(id).style.color="blue";
+    document.getElementById(id).style.borderColor="blue";
+    
+  }
+
+  function hoverOut(id){
+    document.getElementById(id).style.color="white";
+    document.getElementById(id).style.borderColor="white";
+  }
+</script>
+{% endblock %}

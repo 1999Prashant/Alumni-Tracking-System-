@@ -1,0 +1,116 @@
+{% if session.get('key') == "Director" %}
+{% extends "layouts/DIR/commonlayoutdirector.html" %}
+{% block heading %}
+Track Alumni
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+       <div class="row">
+            <!-- card 1 start -->
+            <div class="col-md-12" style="margin-left: 0%;">
+                <div class="card shadowforcards">
+                    <div class="card-title">
+                        <div style="width:80%;margin-top: 5%;margin-left: 5%;" id="searchprocess" class="">
+                            <div class="">
+                            <div class="search" style="border:2px solid black;box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;">
+                                <input id="processsearch" style="background:transparent;border-radius:5px 0 0 5px;" type="text"   class="searchTerm"   placeholder="Search By Name or PRN_ID">
+                                <a href="javascript:void(0);" id="processbutton" class="fa fa-search" style="background:transparent;cursor:pointer;text-decoration:none;margin-right: 5%;padding:5px;border-radius:0 5px 5px 0;font-size:20px;color: black;">
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="card-body " style="display:flex;justify-content: space-between;margin-left: 5%;">
+                        <form class="row" action="/director/trackalumni" method="POST">
+                        <div >
+                            <select name="year" id="year"  style="width:7rem;height:2rem;margin-right: 20px;">
+                                <option selected disabled>Select Year</option> 
+                                <option>2017</option>
+                                <option >2018</option>
+                                <option >2019</option>
+                                <option >2016</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select name="branch" id="branch" style="width:15rem;height:2rem;margin-right: 20px;">
+                                <option selected disabled>Branch</option> 
+                                <option >Computer Science and Engineering</option>
+                                <option >Information Technology</option>
+                                <option >Civil Engineering</option>
+                                <option >Mechanical Engineering</option>
+                            </select>
+                        </div>
+                        <div >
+                            <select name="specialization" id="specialization"  style="width:10rem;height:2rem;margin-right: 20px;">
+                                <option selected disabled>Specialization</option> 
+                                <option>IOT</option>
+                                <option >Artificial intelligence</option>
+                                <option >Full Stack Web Development</option>
+                                <option>Machine Learning</option>    
+                            </select>
+                        </div>
+                        <div >
+                            <select name="work-ex" id="work-ex" style="width:10rem;height:2rem;margin-right: 20px;">
+                                <option selected disabled>Work Experience</option> 
+                                <option >2 Years</option>
+                                <option >3 Years</option>
+                                <option >4 Years</option>
+                                <option >5 Years</option>                  
+                            </select>
+                        </div>
+                        <div >
+                            <button style="border:2px solid black;color:black;padding: 5px;width: 5rem;"class="btn btn-primary"  type="submit">Search</button>
+                        </div>
+                        <div></div>
+                        <div>&nbsp</div>
+                        </form>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="row" id="filterrow" >
+            <!-- card 1 start -->
+            <div class="col-md-12" style="margin-left: 0%;">
+                <div class="card shadowforcards">
+                    <div class="card-title"><br>
+                        <b style="margin-left:3%;font-weight: 600;font-size: 1.2em;">ALUMNI DATA</b>
+                    </div>
+                    <div class="card-body" style="text-transform:uppercase;overflow:auto;display:flex;justify-content: space-between;margin-left: 3%;">
+                        <table style="white-space: nowrap;" id="table_schedule" class="table table-hover table-striped table.active justify-content: space-evenly;">
+                            <thead style="border-top: 2px solid black;border-bottom: 2px solid black;" >
+                                <th>PRN_ID</th>
+                                <th>NAME</th>
+                                <th>YEAR</th>
+                                <th>Branch</th>
+                                <th>Specialization</th>
+                                <th>Work Experience</th>
+                                <th>Check Profile</th>
+                            </thead>
+                            <tbody>
+                                    {% for x in alumni %}
+                                    <tr>
+                                    <td>{{x.PRN}}</td>
+                                    <td>{{x.Name}}</td>
+                                    <td>{{x.Year}}</td>
+                                    <td>{{x.Branch}}</td>
+                                    <td>{{x.Specialization}}</td>
+                                    <td>{{x.Work_Ex}}</td>
+                                    <td><button class="btn btn-primary"><i class="fa fa-user"></i></button></td>
+                                <tr>
+                                    {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>         
+            </div>
+    </div>
+</div>
+
+<!-- Search Box End -->  
+{% endblock %}
+{% else %}
+<center><h1>You are Not an Authorized User !</h1></center>
+{% endif %}

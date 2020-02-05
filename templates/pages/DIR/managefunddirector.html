@@ -1,0 +1,96 @@
+{% if session.get('key') == "Director" %}
+{% extends "layouts/DIR/commonlayoutdirector.html" %}
+
+{% block heading%}
+Manage Funds
+{% endblock %}
+{% block content %}
+
+<div class="row" style="margin-top: 3%;">
+  <div class="col-md-5" style="margin-left: 3%;">
+    <div class="card shadowforcards" style="display:flex;justify-content:space-between;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+      <div >
+      <img style="height: fit-content;border-bottom:2px solid black;" class="card-img-top" src="../static/IMG/college.png" alt="">
+      </div>
+      <!-- <hr> -->
+      <div class="card-body">
+        <h3 class="card-title">College Developement</h3><br>
+        <button onmouseout="hoverOut(id);" id="btn1" onmouseover="hoverOver(id);" class="btn btn-primary button" style="border-color: white;color: white;">View Report</button>
+        <button onmouseout="hoverOut(id);" id="btn2" onmouseover="hoverOver(id);" class="btn btn-primary button" style="border-color: white;color: white;">Download Report</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-5" style="margin-left: 3%;">
+      <div class="card shadowforcards" style="display:flex;justify-content:space-between;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+        <div >
+        <img style="border-bottom:2px solid black;height: fit-content;" class="card-img-top" src="../static/IMG/scholer.png" alt="">
+        </div>
+        <!-- <hr> -->
+        <div class="card-body">
+          <h3 class="card-title">Student Scholership</h3><br>
+          <button onmouseout="hoverOut(id);" id="btn3" onmouseover="hoverOver(id);" class="btn btn-primary" style="border-color: white;color: white;">View Report</button>
+          <button onmouseout="hoverOutReport(id);" id="btn4" onmouseover="hoverOverReport(id);" class="btn btn-primary" style="border-color: white;color: white;">Download Report</button>
+        </div>
+        <!-- <hr> -->
+      </div>
+    </div>
+
+    
+</div>
+
+<!-- <div class="row" style="margin-top: 3%;">
+  <div class="col-md-4" style="margin-left: 3%;">
+    <div class="card shadowforcards" style="display:flex;justify-content:space-between;width:30rem;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+      <div>
+      <img style="height: fit-content;border-bottom:2px solid black;" class="card-img-top" src="../static/IMG/college.png" alt="">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Developement Fund</h3><br>
+        <button onmouseout="hoverOut(id);" id="btn1" onmouseover="hoverOver(id);" class="btn btn-primary button" style="border-color: white;color: white;">View Report</button>
+        <button onmouseout="hoverOut(id);" id="btn2" onmouseover="hoverOver(id);" class="btn btn-primary button" style="border-color: white;color: white;">Download Report</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4" style="margin-left: 5%;">
+      <div class="card shadowforcards" style="display:flex;justify-content:space-between;width:30rem;background-image: linear-gradient(to bottom, #b56bd1, #ae71d6, #a776db, #a07bdf, #9980e3, #967fe6, #937fea, #8f7eed, #9077f1, #9270f5, #9568f8, #995ffb);border:2px solid black;">
+        <div >
+        <img style="border-bottom:2px solid black;height: fit-content;" class="card-img-top" src="../static/IMG/scholer.png" alt="">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Student Scholership</h3><br>
+          <button onmouseout="hoverOut(id);" id="btn3" onmouseover="hoverOver(id);" class="btn btn-primary" style="border-color: white;color: white;">View Report</button>
+          <button onmouseout="hoverOutReport(id);" id="btn4" onmouseover="hoverOverReport(id);" class="btn btn-primary" style="border-color: white;color: white;">Download Scholership</button>
+        </div>
+      </div>
+    </div>    
+</div> -->
+
+<script>
+function hoverOut(id){
+document.getElementById(id).style.color="white";
+document.getElementById(id).style.borderColor="white";
+ }
+function hoverOver(id){
+document.getElementById(id).style.color="blue";
+document.getElementById(id).style.borderColor="blue";
+}
+</script>
+
+<script>
+function hoverOutReport(id){
+document.getElementById(id).style.color="white";
+document.getElementById(id).style.borderColor="white";  
+}
+function hoverOverReport(id){
+document.getElementById(id).style.color="blue";
+document.getElementById(id).style.borderColor="blue";
+}
+</script>
+
+
+{% endblock %}
+{% else %}
+<center><h1>You are Not an Authorized User !</h1></center>
+{% endif %}

@@ -1,0 +1,90 @@
+{% if session.get('key') == "DHE" %}
+{% extends "layouts/DHE/commonlayoutdhe.html" %}
+{% block heading %}
+Track Alumni
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+       <div class="row">
+            <!-- card 1 start -->
+            <div class="col-md-8" style="margin-left: 0%;">
+                <div class="card shadowforcards">
+                    <div class="card-title">
+                        <div style="width:80%;margin-top: 5%;margin-left: 5%;" id="searchprocess" class="">
+                            <div class="">
+                            <div class="search" style="border:2px solid black;box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;">
+                                <input id="processsearch" style="background:transparent;border-radius:5px 0 0 5px;" type="text"   class="searchTerm"   placeholder="Search By Name or PRN_ID">
+                                <a href="javascript:void(0);" id="processbutton" class="fa fa-search" style="background:transparent;cursor:pointer;text-decoration:none;margin-right: 5%;padding:5px;border-radius:0 5px 5px 0;font-size:20px;color: black;">
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="card-body " style="display:flex;justify-content: space-between;margin-left: 5%;">
+                        <form class="row" action="/DHE/trackalumni" method="POST">
+                        <div >
+                            <select name="college"  style="width:25rem;height:2rem;margin-right: 20px;">
+                                <option selected disabled>Select College</option> 
+                                <option>MGM'S COLLEGE OF ENGINEERING NANDED</option>
+                                <option >SGGS COLLEGE OF ENGINEERING NANDED</option>
+                            </select>
+                        </div>
+
+                        <div >
+                            <button style="border:2px solid black;color:black;padding: 5px;width: 5rem;"class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                        <div></div>
+                        <div>&nbsp</div>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <div class="row" id="filterrow" >
+            <!-- card 1 start -->
+            <div class="col-md-12" style="margin-left: 0%;">
+                <div class="card shadowforcards">
+                    <div class="card-title"><br>
+                        <b style="margin-left:3%;font-weight: 600;font-size: 1.2em;">ALUMNAE DATA</b>
+                    </div>
+                    <div class="card-body" style="text-transform:uppercase;overflow:auto;height:20rem;display:flex;justify-content: space-between;margin-left: 3%;">
+                        <table style="white-space: nowrap;" id="table_schedule_dhe" class="table table-hover table-striped table.active justify-content: space-evenly;">
+                            <thead style="border-top: 2px solid black;border-bottom: 2px solid black;" >
+                                <th>PRN_ID</th>
+                                <th>NAME</th>
+                                <th>YEAR</th>
+                                <th>Branch</th>
+                                <th>Specialization</th>
+                                <th>Work Experience</th>
+                                <th>College</th>
+                                <th>Check Profile</th>
+                            </thead>
+                            <tbody> 
+                                
+                                {% for x in alumni %}
+                                    <tr>
+                                    <td>{{x.PRN}}</td>
+                                    <td>{{x.Name}}</td>
+                                    <td>{{x.Year}}</td>
+                                    <td>{{x.Branch}}</td>
+                                    <td>{{x.Specialization}}</td>
+                                    <td>{{x.Work_Ex}}</td>
+                                    <td>{{x.College}}</td>
+                                    <td><button class="btn btn-primary"><i class="fa fa-user"></i></button></td>
+                                <tr>
+                                    {% endfor %}
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>         
+            </div>
+    </div>
+</div>
+
+<!-- Search Box End -->  
+{% endblock %}
+{% else %}
+<center><h1>You are Not an Authorized User !</h1></center>
+{% endif %}
